@@ -49,7 +49,10 @@ my-release-mediawiki  LoadBalancer  10.107.73.144   <pending>    80:31034/TCP  0
 NAME                DESIRED  CURRENT  AGE
 my-release-mariadb  1        1        0s
 
-
+######Get the Mediawiki URL by running:##################################################################
+  export APP_HOST=$(kubectl get svc --namespace default my-release-mediawiki --template "{{ range (index .status.loadBalancer.ingress 0) }}{{ . }}{{ end }}")
+  export APP_PASSWORD=$(kubectl get secret --namespace default my-release-mediawiki -o jsonpath="{.data.mediawiki-password}" | base64 --decode)
+  export APP_DATABASE_PASSWORD=$(kubectl get secret --namespace default my-release-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
 ########Get your MediaWiki login credentials by running:###################################################
 
 echo Username: user
