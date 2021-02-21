@@ -13,7 +13,7 @@ Objective : Script_deploy_mediawiki.sh  script use for deploy mediawiki pod
 Execution : Clone this repo and run shell script with below command\
 sh Script_deploy_mediawiki.sh
 
-#############################################################################################################
+###########################################################################################################
 
 Resources creation : Resources will be created when you triggered
 NAME:   my-release
@@ -50,7 +50,7 @@ NAME                DESIRED  CURRENT  AGE
 my-release-mariadb  1        1        0s
 
 
-########Get your MediaWiki login credentials by running:
+########Get your MediaWiki login credentials by running:###################################################
 
 echo Username: user
 
