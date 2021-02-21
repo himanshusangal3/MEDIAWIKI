@@ -1,13 +1,20 @@
 # MEDIAWIKI
 MEDIAWIKI PROBLEM STATEMENT
-#############################################################################################################
+###########################################################################################################
+
 Prequisite : Running Kubernetes cluster with kubectl command should be fine.
-#############################################################################################################
+
+###########################################################################################################
+
 Objective : Script_deploy_mediawiki.sh  script use for deploy mediawiki pod
+
 #############################################################################################################
+
 Execution : Clone this repo and run shell script with below command\
 sh Script_deploy_mediawiki.sh
+
 #############################################################################################################
+
 Resources creation : Resources will be created when you triggered
 NAME:   my-release
 LAST DEPLOYED: Sun Feb 21 15:55:26 2021
@@ -42,6 +49,9 @@ my-release-mediawiki  LoadBalancer  10.107.73.144   <pending>    80:31034/TCP  0
 NAME                DESIRED  CURRENT  AGE
 my-release-mariadb  1        1        0s
 
+
 ########Get your MediaWiki login credentials by running:
+
 echo Username: user
+
 echo Password: $(kubectl get secret --namespace default my-release-mediawiki -o jsonpath="{.data.mediawiki-password}" | base64 --decode)
