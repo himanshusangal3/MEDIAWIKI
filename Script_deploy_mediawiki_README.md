@@ -11,11 +11,11 @@ Objective : Script_deploy_mediawiki.sh  script use for deploy mediawiki pod.<br>
 #############################################################################################################
 
 Execution : 
-Step 1 ) Clone this repo.<br>
-Step 2 ) Switch to the master branch.<br>
+Step 1 ) Clone this repo.<br><br>
+Step 2 ) Switch to the master branch.<br><br>
 Step 3 ) Go inside the branch and run below command to create service sccount.<br>
-kubectl create -f helm-service-account.yaml
-Step 4 ) Run shell script with below command to deploy all the resources in curret section.<br>
+kubectl create -f helm-service-account.yaml<br><br>
+Step 4 ) Run shell script with below command to deploy all the resources in curret section.<br><br>
 sh Script_deploy_mediawiki.sh
 
 ###########################################################################################################
