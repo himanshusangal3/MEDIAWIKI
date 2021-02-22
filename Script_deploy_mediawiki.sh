@@ -3,6 +3,10 @@ if ! which helm > /dev/null 2>&1; then
      curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
      chmod 700 get_helm.sh
      ./get_helm.sh
+     #Init Tiller pod
+     helm init --service-account helm
+     #Wait for Tiller pod to be up about 50
+     sleep 50
 fi
 
 
